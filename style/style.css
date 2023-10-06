@@ -4,28 +4,135 @@ body {
     padding: 0;
     font-family:'Roboto', sans-serif;
 }
+/* Style du formulaire */
 form {
-  display: flex;
-  flex-direction: column;
-  width: 40vw;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20vh;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-label, input[type="text"], input[type="date"], textarea, p {
-  font-size: 1em;
-  margin-top: 1vh;
-  width: 40vw;
-}
+
+/* Style du titre du formulaire */
 h1 {
+  font-size: 24px;
   text-align: center;
 }
-input[type="submit"] {
-  font-size: 1em;
-  width: 20vw;
-  margin-top: 3vh;
-  align-self: flex-end;
+
+/* Style des étiquettes des champs */
+label {
+  display: block;
+  margin: 10px 0;
+  font-weight: bold;
 }
+
+/* Style des champs texte et de la zone de texte */
+input[type="text"],
 textarea {
-  resize: none;
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin: 5px 0;
+}
+
+/* Style du champ de date */
+input[type="date"] {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin: 5px 0;
+}
+
+/* Style du bouton de soumission */
+input[type="submit"] {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Style du message d'erreur */
+#error {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+/* Style de la barre de navigation */
+nav {
+  background-color: #007BFF;
+  padding: 10px 0;
+  margin-bottom: 25px;
+}
+
+/* Style de la liste non ordonnée */
+nav ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+/* Style des éléments de la liste */
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+
+/* Style des liens */
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Style des liens au survol de la souris */
+nav a:hover {
+  text-decoration: underline;
+}
+
+
+/* Styles pour la liste d'articles */
+.article-list {
+  margin-top: 20px;
+}
+
+/* Styles pour chaque article individuel */
+.article {
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px 0;
+}
+
+/* Styles pour le titre de l'article */
+.article-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Styles pour le contenu de l'article */
+.article-content {
+  margin-top: 10px;
+}
+
+/* Styles pour la date de création de l'article */
+.article-date {
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* Style du message d'erreur */
+#error {
+  color: red;
+  font-weight: bold;
+  text-align: center;
 }

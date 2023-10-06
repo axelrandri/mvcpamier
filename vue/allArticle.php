@@ -1,19 +1,14 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liste des articles</title>
-</head>
-<body>
-    <h1>Liste des articles :</h1>
-    <?php foreach ($articles as $key => $value):?>
-        <!-- Exemple de traitement -->
-        <!-- mode tableau (FETCH_ASSOC)
-        <h2><?=$value['titre']?></h2>-->
-        <!-- mode objet (FETCH_OBJ) 
-        <h2><?=$value->title?>-->
-        <!-- Affichage de la liste des articles (traitement)-->
-    <?php endforeach ?> 
-    <p id="error"><?=$error?></p>
-</body>
-</html>
+
+<h1>Liste des articles :</h1>
+
+<div class="article-list">
+    <?php foreach ($articles as $article): ?>
+        <div class="article">
+            <h2 class="article-title"><?= htmlspecialchars($article->title) ?></h2>
+            <p class="article-content"><?= htmlspecialchars($article->content) ?></p>
+            <p class="article-date">Date de création : <?= htmlspecialchars($article->creation_date) ?></p>
+        </div>
+    <?php endforeach; ?>
+</div>
+
+<p id="error"><?= $error ?></p>

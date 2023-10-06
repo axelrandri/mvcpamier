@@ -33,5 +33,13 @@
     }
     //Fonction qui retourne tous les articles
     function getAllArticle($bdd){
-        
+        try {
+            $req = $bdd->prepare("SELECT * FROM article");
+            //exécution de la requête
+            $req->execute();
+            return $req->fetchAll(PDO::FETCH_OBJ);
+        } 
+        catch (Exception $e) {
+            die('Error : '.$e->getMessage());
+        }
     }
