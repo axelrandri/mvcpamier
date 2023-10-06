@@ -29,6 +29,9 @@
         case '/mvcpamier/allarticle':
             include './controller/controllerAllArticle.php';
             break;
+        case '/mvcpamier/updatearticle':
+            include './controller/controllerUpdateArticle.php';
+            break;
         default:
             include './controller/controller404.php';
             break;

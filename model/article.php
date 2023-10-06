@@ -43,3 +43,20 @@
             die('Error : '.$e->getMessage());
         }
     }
+
+        //Fonction ajouter un article en BDD
+        function updateArticleById($bdd, $title, $content, $date, $id){
+            try {
+                //préparation de la requête
+               $req = $bdd->prepare('UPDATE article SET titled=?, contentd=? , creation_date=?, $id=?');
+               //bind des paramètres
+               $req->bindParam(1, $title, PDO::PARAM_STR);
+               $req->bindParam(2, $content, PDO::PARAM_STR);
+               $req->bindParam(3, $date, PDO::PARAM_STR);
+               $req->bindParam(4, $$id, PDO::PARAM_STR);
+               //exécution de la requête
+               $req->execute();
+            } catch (Exception $e) {
+                die('Error : '.$e->getMessage());
+            }
+        }
